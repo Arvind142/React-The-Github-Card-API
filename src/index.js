@@ -33,7 +33,7 @@ class Form extends React.Component {
     }
     onSubmitFunction = async (event) => {
         event.preventDefault();
-        const resp = await axios.get(`http://api.github.com/users/${this.state.username}`);
+        const resp = await axios.get(`https://api.github.com/users/${this.state.username}`);
         const data = await resp.data;
         this.props.profileAdder(data);
         this.setState({username:''});
